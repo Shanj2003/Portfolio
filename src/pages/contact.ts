@@ -17,9 +17,9 @@ export function contactPage(activePage: string): string {
 
         <div class="contact-card">
           <h2>Email</h2>
-          <p>
-            meshanjeev2003@gmail.com
-          </p>
+          <a href="mailto:meshanjeev2003@gmail.com">
+          meshanjeev2003@gmail.com
+          </a>
         </div>
 
         <div class="contact-card">

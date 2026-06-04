@@ -34,7 +34,9 @@ export function overviewPage(activePage: string) {
 
   <div class="hero-actions">
     <button class="primary-btn">
+    <a href="/resume.pdf" download class = "resumeLink">
       Download Resume
+    </a>
     </button>
   </div>
 
@@ -63,6 +65,31 @@ export function overviewPage(activePage: string) {
           </div>
 
         </section>
+
+        <section class="featured-projects">
+
+  <h2>Featured Projects</h2>
+
+  <div class="featured-grid">
+
+    <div class="featured-card">
+      <h3>AlumniConnect</h3>
+      <p>
+        Alumni networking platform built
+        using Spring Boot.
+      </p>
+    </div>
+
+    <div class="featured-card">
+      <h3>Cartify</h3>
+      <p>
+        Full-stack shopping platform.
+      </p>
+    </div>
+
+  </div>
+
+</section>
 
       </main>
 

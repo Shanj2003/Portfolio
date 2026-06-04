@@ -9,32 +9,35 @@ export function renderPage(page: string): void {
 
   if (!root) return;
 
-  switch (page) {
-    case "overview":
-      root.innerHTML = overviewPage(page);
-      break;
+  root.classList.add("fade-out");
 
-    case "projects":
-      root.innerHTML = projectsPage(page);
-      break;
+  setTimeout(() => {
+    switch (page) {
+      case "overview":
+        root.innerHTML = overviewPage(page);
+        break;
 
-    case "experience":
-      root.innerHTML = experiencePage(page);
-      break;
+      case "projects":
+        root.innerHTML = projectsPage(page);
+        break;
 
-    case "skills":
-      root.innerHTML = skillsPage(page);
-      break;
+      case "experience":
+        root.innerHTML = experiencePage(page);
+        break;
 
-    case "contact":
-      root.innerHTML = contactPage(page);
-      break;
+      case "skills":
+        root.innerHTML = skillsPage(page);
+        break;
 
-    default:
-      root.innerHTML = overviewPage("overview");
-  }
+      case "contact":
+        root.innerHTML = contactPage(page);
+        break;
+    }
 
-  bindNavigation();
+    root.classList.remove("fade-out");
+
+    bindNavigation();
+  }, 180);
 }
 
 function bindNavigation() {
